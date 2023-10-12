@@ -73,10 +73,12 @@ const HeroCard: FC<HeroCardProps> = ({ character, popular }) => {
             startIcon={vehicleIcon(24, 24, 'currentColor')}
             className='
         z-40
+        w-full
         drop-shadow-md
         sm:absolute
-        sm:right-0
-        sm:top-0
+         sm:right-0
+         sm:top-0
+        sm:w-auto
         sm:rounded-none
         sm:rounded-bl-[30px]
         sm:rounded-tr-[30px]'
@@ -123,11 +125,12 @@ const HeroCard: FC<HeroCardProps> = ({ character, popular }) => {
         <Button
           startIcon={vehicleIcon(24, 24, 'currentColor')}
           className='
+        w-full
         drop-shadow-md
         sm:absolute
         sm:right-0
         sm:top-0
-
+        sm:w-auto
         sm:rounded-none
         sm:rounded-bl-[30px]
         sm:rounded-tr-[30px]'
