@@ -57,7 +57,7 @@ const Personal = () => {
   return (
     <>
       <div className='mx-auto h-full max-w-screen-desktop px-2 pb-5 pt-12 text-white sm:px-10'>
-        <div className='mt-32'></div>
+        <div className='mt-28'></div>
         <div className='mb-12 flex h-[60px] flex-row'>
           <Link to='/' className='h-full'>
             <div className='flex h-full items-center justify-center border-r-2 border-primary-layout bg-primary-yellow px-2 text-center text-xl font-bold text-primary-layout transition'>
