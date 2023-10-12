@@ -24,7 +24,6 @@ const Personal = () => {
 
   useEffect(() => {
     if (person && person.vehicles && person.vehicles.length > 0) {
-      // Map through the person's vehicles and fetch data for each vehicle
       const fetchVehicleData = async () => {
         const vehicleData = await Promise.all(
           person.vehicles.map(async (vehicleUrl) => {
@@ -60,7 +59,7 @@ const Personal = () => {
       <div className='mx-auto h-full max-w-screen-desktop px-2 pb-5 pt-12 text-white sm:px-10'>
         <div className='mt-32'></div>
         <div className='mb-12 flex h-[60px] flex-row'>
-          <Link to='/'>
+          <Link to='/' className='h-full'>
             <div className='flex h-full items-center justify-center border-r-2 border-primary-layout bg-primary-yellow px-2 text-center text-xl font-bold text-primary-layout transition'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -79,15 +78,17 @@ const Personal = () => {
               Back
             </div>
           </Link>
-          <h2 className='z-40  h-full min-w-[128px]    rounded-r-[30px] bg-primary-yellow px-4 text-2xl font-bold text-primary-layout sm:text-5xl'>
-            {person ? (
-              person.name
-            ) : (
-              <div className='flex h-full items-center justify-center px-4 text-center'>
-                <BeatLoader size={24} color='rgb(22,27,71)' />
-              </div>
-            )}
-          </h2>
+          <div className='flex h-full items-center justify-center rounded-r-[30px] border-r-2 border-primary-layout bg-primary-yellow px-2 pr-4 text-center text-xl font-bold text-primary-layout transition'>
+            <h2 className='z-40   min-w-[128px] text-2xl font-bold text-primary-layout sm:text-5xl'>
+              {person ? (
+                person.name
+              ) : (
+                <div className='flex h-full items-center justify-center px-4 text-center'>
+                  <BeatLoader size={24} color='rgb(22,27,71)' />
+                </div>
+              )}
+            </h2>
+          </div>
         </div>
 
         <motion.div

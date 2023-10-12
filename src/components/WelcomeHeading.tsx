@@ -50,21 +50,23 @@ const WelcomeHeading = () => {
               >
                 {heading?.film}
               </motion.p>
-              <motion.a
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1 }}
-                href={heading?.film_link}
-                target='_blank'
-                className='z-50 flex w-full justify-end sm:w-auto'
-              >
-                <Button
-                  className='rounded-none rounded-br-[30px] rounded-tl-[30px] drop-shadow-md'
-                  startIcon={filmIcon(24, 24, 'currentColor')}
+              <div className='flex w-full justify-end'>
+                <motion.a
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 1 }}
+                  href={heading?.film_link}
+                  target='_blank'
+                  className='z-50 sm:w-auto'
                 >
-                  Go to film
-                </Button>
-              </motion.a>
+                  <Button
+                    className='rounded-none rounded-br-[30px] rounded-tl-[30px] drop-shadow-md'
+                    startIcon={filmIcon(24, 24, 'currentColor')}
+                  >
+                    Go to film
+                  </Button>
+                </motion.a>
+              </div>
               <motion.p
                 initial={{ scale: 0.3 }}
                 animate={{ scale: 1 }}
