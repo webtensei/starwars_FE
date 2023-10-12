@@ -3,7 +3,6 @@ HOSTED: https://starwars.webtensei.ru
 
 ## Запуск
 
-Два варианта
 1. `yarn` && `yarn start`
 
 ## TODO
